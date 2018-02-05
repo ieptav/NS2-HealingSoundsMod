@@ -161,7 +161,7 @@ local function HealEntity(self, player, targetEntity)
 		targetEntity:TriggerEffects("heal")
 	end
 
-	if not targetEntity:isa("Player") and not targetEntity.constructionComplete and amountHealed > 0 then
+	if HasMixin(targetEntity, "Construct") and not targetEntity.constructionComplete and amountHealed > 0 then
 		player:TriggerEffects("construct")
 	end
 end
