@@ -156,12 +156,11 @@ local function HealEntity(self, player, targetEntity)
 
     end
 	
-	if targetEntity:isa("Player") and amountHealed > 0 or targetEntity.constructionComplete and amountHealed > 0 then
+	if (targetEntity:isa("Player") or targetEntity.constructionComplete) and amountHealed > 0 then
 		player:TriggerEffects("heal_sound")
 		targetEntity:TriggerEffects("heal")
-		
 	end
-	
+
 	if not targetEntity:isa("Player") and not targetEntity.constructionComplete and amountHealed > 0 then
 		player:TriggerEffects("construct")
 	end
