@@ -1,0 +1,1 @@
+ModLoader.SetupFileHook( "lua/Weapons/Alien/HealSprayMixin.lua", "lua/HealingSounds/Weapons/Alien/HealSprayMixin.lua", "post" )

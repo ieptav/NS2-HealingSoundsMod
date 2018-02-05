@@ -1,0 +1,1 @@
+modEntry = { FileHooks = "lua/HealingSounds/FileHooks.lua", Priority = 10 }
